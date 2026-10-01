@@ -182,6 +182,7 @@ FILMES = {
             "Entrevista com o Vampiro", "Ghost: Do Outro Lado da Vida", "O Monstro do Lago Negro", "Eragon",
             "O Lar das Crianças Peculiares", "Branca de Neve e o Caçador", "A Companhia dos Lobos", "A Bússola de Ouro",
             "Edward Mãos de Tesoura", "A Garota da Capa Vermelha", "James e o Pêssego Gigante",
+        ],
       },
   "14": {
         "emoji": "☀️",
@@ -193,6 +194,7 @@ FILMES = {
             "Up: Altas Aventuras", "Wall-E", "Encanto", "O Bom Dinossauro",
             "Elementos", "Spirit: O Corcel Indomável", "Ponyo", "O Conto da Princesa Kaguya",
             "O Menino, a Toupeira, a Raposa e o Cavalo", "Flow", "Pé Pequeno",
+        ],
       },
   "15": {
         "emoji": "🎀",
@@ -204,6 +206,7 @@ FILMES = {
             "O Diabo Veste Prada", "Maria Antonieta", "O Grande Hotel Budapeste", "Pobres Criaturas",
             "Alice no País das Maravilhas", "A Viagem de Chihiro", "Emma", "Confissões de uma adolescente em Crise",
             "O Grande Gatsby", "As Patricinhas de Beverly Hills", "Amor Além da Vida",
+          ],
       },
   "16": {
         "emoji": "❄️",
@@ -215,6 +218,7 @@ FILMES = {
             "Um Segunda Chance para Amar", "O Natal do Charlie Brown", "Titio Noel", "O Grinch",
             "Um Natal Muito, Muito Louco", "Crônicas de Natal", "101 Dálmatas", "Bambi",
             "Barbie em Um Conto de Natal", "Brilho Eterno de Uma Mente Sem Lembranças", "O Caçador e a Rainha de Gelo",
+          ],
       },
   "17": {
         "emoji": "🎙️",
@@ -226,6 +230,7 @@ FILMES = {
             "Ela Dança, Eu Danço", "Flashdance", "O Rei do Show", "Chicago",
             "Grease", "Tick, Tick... Boom!", "A Voz Superma do Blues", "Moulin Rouge",
             "Happy Feet", "Amor, Sublime Amor", "Cisne Negro",
+          ],
       },
   "18": {
         "emoji": "🎮",
@@ -237,6 +242,7 @@ FILMES = {
             "Maze Runner", "Super Mario Bros. – O Filme", "Sonic: O Filme", "Pixels",
             "Scott Pilgrim contra o Mundo", "Alita: Anjo de Combate", "Tomb Raider", "Uma Noite no Museu",
             "Valerian e a Cidade dos Mil Planetas", "Zathura", "Oblivion",
+          ],
       },
 }
 
