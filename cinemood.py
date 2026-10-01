@@ -244,6 +244,30 @@ FILMES = {
             "Valerian e a Cidade dos Mil Planetas", "Zathura", "Oblivion",
           ],
       },
+  "19": {
+        "emoji": "🍳",
+        "titulo": "Quero um filme que me dê vontade de cozinhar",
+        "lista": [
+            "Ratatoullie", "A 100 Passos de Um Sonho", "A Grande Noite",
+            "Chef", "O Sabor da Vida", "Comer Beber Viver",
+            "Sem Reservas", "Os Sabores do Palácio", "Soul Kitchen",
+            "A Princesa e o Sapo", "Waitress", "Estômago",
+            "East Side Sushi", "Pegando Fogo", "O Menu", "Como Água Para Chocolate",
+            "Uma Receita para a Máfia", "A Lancheira", "Julie & Julia", "Sabor da Vida",
+          ],
+      },
+  "20": {
+        "emoji": "🔄",
+        "titulo": "E se eu pudesse viver tudo de novo?",
+        "lista": [
+            "Feitiço do Tempo", "Antes Que Eu Vá", "Questão de Tempo",
+            "No Limite do Amanhã", "Sr. Ninguém", "Efeito Borboleta",
+            "De Caso com o Acaso", "O Mapa das Pequenas Coisas Perfeitas", "Click",
+            "Palm Springs", "Um Dia de Chuva em Nova York", "As Vantagens de Ser Invisível",
+            "Tudo em Todo Lugar Ao Mesmo Tempo", "O Curioso Caso de Benjamin Button", "Fonte da Vida", "Projeto Adam",
+            "17 Outra Vez", "A Felicidade Não se Compra", "Um Homem de Família", "Peggy Sue – Seu Passado a Espera",
+          ],
+      },
 }
 
 SAIR = "0"
