@@ -172,6 +172,72 @@ FILMES = {
             "127 Horas", "Náufrago", "A Volta ao Mundo em 80 Dias",
         ],
     },
+  "13": {
+        "emoji": "🕯️",
+        "titulo": "Quero algo bonito, porém sombrio",
+        "lista": [
+            "Coraline", "O Labirinto do Fauno", "O Estranho Mundo de Jack",
+            "Frankenstein (2025)", "A Lenda do Cavaleiro Sem Cabeça", "Os Fantasmas de Scrooge",
+            "O Corcunda de Notre Dame", "A Bela e a Fera (2014)", "O Fantasma da Ópera",
+            "Entrevista com o Vampiro", "Ghost: Do Outro Lado da Vida", "O Monstro do Lago Negro", "Eragon",
+            "O Lar das Crianças Peculiares", "Branca de Neve e o Caçador", "A Companhia dos Lobos", "A Bússola de Ouro",
+            "Edward Mãos de Tesoura", "A Garota da Capa Vermelha", "James e o Pêssego Gigante",
+      },
+  "14": {
+        "emoji": "☀️",
+        "titulo": "Quero um filme que pareça um abraço",
+        "lista": [
+            "Paddington", "O Serviço de Entregas da Kiki", "Stuart Little 2",
+            "Pequena Miss Sunshine", "O Jardim Secreto", "Extraordinário",
+            "A Invenção de Hugo Cabret", "Questão de Tempo", "De Repente 30",
+            "Up: Altas Aventuras", "Wall-E", "Encanto", "O Bom Dinossauro",
+            "Elementos", "Spirit: O Corcel Indomável", "Ponyo", "O Conto da Princesa Kaguya",
+            "O Menino, a Toupeira, a Raposa e o Cavalo", "Flow", "Pé Pequeno",
+      },
+  "15": {
+        "emoji": "🎀",
+        "titulo": "Filmes com estética de Pinterest",
+        "lista": [
+            "Orgulho e Preconceito", "Adoráveis Mulheres", "Razão e Sensibilidade",
+            "O Fabuloso Destino de Amélie Poulain", "Meia Noite em Paris", "Brooklyn",
+            "Me Chame Pelo seu Nome", "Desejo e Reparação", "Cruella",
+            "O Diabo Veste Prada", "Maria Antonieta", "O Grande Hotel Budapeste", "Pobres Criaturas",
+            "Alice no País das Maravilhas", "A Viagem de Chihiro", "Emma", "Confissões de uma adolescente em Crise",
+            "O Grande Gatsby", "As Patricinhas de Beverly Hills", "Amor Além da Vida",
+      },
+  "16": {
+        "emoji": "❄️",
+        "titulo": "Quero um filme com clima de inverno",
+        "lista": [
+            "Frozen", "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa", "Klaus",
+            "O Expresso Polar", "A Origem dos Guardiões", "O Amor Não Tira Férias",
+            "Simplesmente Amor", "Enquanto Você Dormia", "Escrito Nas Estrelas",
+            "Um Segunda Chance para Amar", "O Natal do Charlie Brown", "Titio Noel", "O Grinch",
+            "Um Natal Muito, Muito Louco", "Crônicas de Natal", "101 Dálmatas", "Bambi",
+            "Barbie em Um Conto de Natal", "", "",
+      },
+  "17": {
+        "emoji": "🎙️",
+        "titulo": "Quero sair do filme querendo virar artista",
+        "lista": [
+            "Michael", "Rocketman", "Bohemian Rhapsody",
+            "Nasce Uma Estrela", "Mesmo se Nada der Certo", "",
+            "", "", "",
+            "", "", "", "",
+            "", "", "", "",
+            "", "", "",
+      },
+  "18": {
+        "emoji": "🎮",
+        "titulo": "Quero sentir que estou dentro de um videogame",
+        "lista": [
+            "", "", "",
+            "", "", "",
+            "", "", "",
+            "", "", "", "",
+            "", "", "", "",
+            "", "", "",
+      },
 }
 
 SAIR = "0"
