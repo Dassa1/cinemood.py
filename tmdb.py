@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 
 API = "https://api.themoviedb.org/3"
 IMAGENS = "https://image.tmdb.org/t/p/w500"
+FOTOS = "https://image.tmdb.org/t/p/w185"
 
 
 class TMDBErro(Exception):
@@ -53,6 +54,7 @@ def buscar_filme(titulo: str, chave: str, pais: str = "BR"):
     """
     Procura o filme pelo título e devolve um dicionário com:
       id, titulo, ano, sinopse, nota, poster, link_tmdb,
+      duracao, generos, diretor, elenco (nome, personagem, foto),
       link_assistir (página com onde ver no país), streaming, aluguel, compra
 
     Devolve None se o filme não for encontrado.
@@ -71,22 +73,41 @@ def buscar_filme(titulo: str, chave: str, pais: str = "BR"):
     # O TMDB já ordena por relevância; prefere o primeiro que tenha pôster.
     filme = next((r for r in resultados if r.get("poster_path")), resultados[0])
 
-    provedores = (
-        _get(f"/movie/{filme['id']}/watch/providers", chave)
-        .get("results", {})
-        .get(pais, {})
+    # Uma única chamada traz detalhes + elenco + onde assistir.
+    detalhes = _get(
+        f"/movie/{filme['id']}",
+        chave,
+        language="pt-BR",
+        append_to_response="credits,watch/providers",
     )
+
+    provedores = detalhes.get("watch/providers", {}).get("results", {}).get(pais, {})
 
     def nomes(tipo):
         return [p["provider_name"] for p in provedores.get(tipo, [])]
 
-    caminho_poster = filme.get("poster_path")
+    creditos = detalhes.get("credits", {})
+    elenco = [
+        {
+            "nome": p.get("name", ""),
+            "personagem": p.get("character", ""),
+            "foto": f"{FOTOS}{p['profile_path']}" if p.get("profile_path") else None,
+        }
+        for p in sorted(creditos.get("cast", []), key=lambda p: p.get("order", 999))[:6]
+    ]
+    diretores = [c["name"] for c in creditos.get("crew", []) if c.get("job") == "Director"]
+
+    caminho_poster = detalhes.get("poster_path") or filme.get("poster_path")
     return {
         "id": filme["id"],
-        "titulo": filme.get("title") or nome,
-        "ano": (filme.get("release_date") or "")[:4],
-        "sinopse": filme.get("overview") or "",
-        "nota": filme.get("vote_average") or 0,
+        "titulo": detalhes.get("title") or filme.get("title") or nome,
+        "ano": (detalhes.get("release_date") or filme.get("release_date") or "")[:4],
+        "sinopse": detalhes.get("overview") or filme.get("overview") or "",
+        "nota": detalhes.get("vote_average") or filme.get("vote_average") or 0,
+        "duracao": detalhes.get("runtime") or 0,
+        "generos": [g["name"] for g in detalhes.get("genres", [])],
+        "diretor": ", ".join(diretores),
+        "elenco": elenco,
         "poster": f"{IMAGENS}{caminho_poster}" if caminho_poster else None,
         "link_tmdb": f"https://www.themoviedb.org/movie/{filme['id']}",
         "link_assistir": provedores.get("link"),

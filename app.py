@@ -132,6 +132,9 @@ with resultado:
                 meta = []
                 if info["ano"]:
                     meta.append(info["ano"])
+                if info.get("duracao"):
+                    horas, minutos = divmod(info["duracao"], 60)
+                    meta.append(f"{horas}h {minutos:02d}min" if horas else f"{minutos}min")
                 if info["nota"]:
                     meta.append(f"⭐ {info['nota']:.1f}")
                 if meta:
@@ -139,8 +142,13 @@ with resultado:
                         f'<p class="cartao-meta">{"  ·  ".join(meta)}</p>',
                         unsafe_allow_html=True,
                     )
+
+                if info.get("generos"):
+                    st.caption(", ".join(info["generos"]))
                 if info["sinopse"]:
                     st.write(info["sinopse"])
+                if info.get("diretor"):
+                    st.write(f"🎬 **Direção:** {info['diretor']}")
 
                 if info["streaming"]:
                     st.write("📺 **No streaming:** " + ", ".join(info["streaming"]))
@@ -157,19 +165,37 @@ with resultado:
             if aviso:
                 st.caption(aviso)
 
-            b1, b2, b3 = st.columns(3)
-            with b1:
-                st.button(
-                    "🔄 Outra",
-                    key="outra",
-                    on_click=sortear,
-                    args=(chave,),
-                    use_container_width=True,
-                )
-            with b2:
-                st.link_button("▶️ Trailer", trailer, use_container_width=True)
-            with b3:
-                st.link_button("📺 Assistir", assistir, use_container_width=True)
+        # Botões (largura total)
+        b1, b2, b3, b4 = st.columns(4)
+        with b1:
+            st.button(
+                "🔄 Outra",
+                key="outra",
+                on_click=sortear,
+                args=(chave,),
+                use_container_width=True,
+            )
+        with b2:
+            st.link_button("▶️ Trailer", trailer, use_container_width=True)
+        with b3:
+            st.link_button("📺 Onde assistir", assistir, use_container_width=True)
+        with b4:
+            if info:
+                st.link_button("ℹ️ Mais detalhes", info["link_tmdb"], use_container_width=True)
+
+        # Elenco
+        if info and info.get("elenco"):
+            st.subheader("Elenco")
+            cols = st.columns(len(info["elenco"]))
+            for col, ator in zip(cols, info["elenco"]):
+                with col:
+                    if ator["foto"]:
+                        st.image(ator["foto"], use_container_width=True)
+                    else:
+                        st.markdown("## 👤")
+                    st.markdown(f"**{ator['nome']}**")
+                    if ator["personagem"]:
+                        st.caption(ator["personagem"])
 
 st.divider()
 st.caption(
