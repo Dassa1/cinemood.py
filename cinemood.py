@@ -80,7 +80,7 @@ FILMES = {
             "A Hora do Mal", "Midsommar", "Eu Sei o que Vocês Fizeram no Verão Passado",
             "Pânico", "Faça Ela Voltar", "A Hora da Sua Morte", "Jogos Mortais", "Nós",
             "Sexta-Feira 13", "Annabelle", "Invocação do Mal", "Atividade Paranormal",
-            "It: A Coisa", "Longlegs", "Talk to Me: Fale com os Mortos",
+            "It: A Coisa", "Longlegs", "Talk to Me: Fale com os Mortos", "Resident Evil",
         ],
     },
     "6": {
@@ -120,7 +120,7 @@ FILMES = {
             "Telefone Preto", "Ilha do Medo", "Anatomia de uma Queda",
             "Five Nights at Freddy's: O Pesadelo sem Fim", "O Ilusionista", "Corpo Fechado",
             "Se7en: Os Sete Crimes Capitais", "O Silêncio dos Inocentes", "Zodíaco",
-            "Prisioneiros", "A Garota no Trem",
+            "Prisioneiros", "A Garota no Trem", "Pânico", "Donnie Darko",
         ],
     },
     "9": {
@@ -248,12 +248,12 @@ FILMES = {
         "emoji": "🍳",
         "titulo": "Quero um filme que me dê vontade de cozinhar",
         "lista": [
-            "Ratatoullie", "A 100 Passos de Um Sonho", "A Grande Noite",
+            "Ratatouille", "A 100 Passos de Um Sonho", "A Grande Noite",
             "Chef", "O Sabor da Vida", "Comer Beber Viver",
             "Sem Reservas", "Os Sabores do Palácio", "Soul Kitchen",
             "A Princesa e o Sapo", "Waitress", "Estômago",
             "East Side Sushi", "Pegando Fogo", "O Menu", "Como Água Para Chocolate",
-            "Uma Receita para a Máfia", "A Lancheira", "Julie & Julia", "Sabor da Vida",
+            "Uma Receita para a Máfia", "A Lancheira", "Julie & Julia",
           ],
       },
   "20": {
@@ -266,6 +266,7 @@ FILMES = {
             "Palm Springs", "Um Dia de Chuva em Nova York", "As Vantagens de Ser Invisível",
             "Tudo em Todo Lugar Ao Mesmo Tempo", "O Curioso Caso de Benjamin Button", "Fonte da Vida", "Projeto Adam",
             "17 Outra Vez", "A Felicidade Não se Compra", "Um Homem de Família", "Peggy Sue – Seu Passado a Espera",
+            "De Volta para o Futuro",
           ],
       },
 }
