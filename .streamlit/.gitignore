@@ -216,6 +216,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-
-#API KEY
- TMDB_API_KEY = "01f4ca8b9bbbd3a4095224f4803af70d"
